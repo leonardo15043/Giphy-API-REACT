@@ -1,7 +1,7 @@
 import React, { Fragment,useState } from 'react'
 import PropTypes from 'prop-types'
 
-function AddCategory(props) {
+function AddCategory( { setCategories } ) {
 
     const [ inputValue, setInputValue ] = useState('Hola Mundo')
 
@@ -9,17 +9,23 @@ function AddCategory(props) {
         setInputValue( e.target.value );
     }
 
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        setCategories( cats => [ ...cats, inputValue ] ); // agregamos nuevos elementos a nuestra lista 
+        setInputValue(''); // refrescamos el input
+    }
+
     return (
-        <Fragment>
+        <form onSubmit={ handleSubmit }>
             <h2>App Categories</h2>
             <input type="text" value={ inputValue } onChange={ handleInputChange } />
-        </Fragment>
+        </form>
     )
 }
 
 AddCategory.propTypes = {
 
-}
+} 
 
 export default AddCategory
 

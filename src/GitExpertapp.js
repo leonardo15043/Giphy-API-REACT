@@ -16,11 +16,8 @@ const GitExpertapp = props => {
     return (
         <Fragment>
             <h2>GitExpertapp</h2>
-            <AddCategory/>
+           <AddCategory setCategories={ setCategories } />
             <hr/>
-
-            <button onClick={ handleAdd } >Agregar</button>
-
             <ol>
                 {
                     categories.map( category =>{
