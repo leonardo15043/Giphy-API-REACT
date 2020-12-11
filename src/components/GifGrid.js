@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { GitGridItem } from './GitGridItem';
 
 export const GifGrid = ({ category }) => {
@@ -26,8 +26,10 @@ export const GifGrid = ({ category }) => {
     }
 
     return ( 
-        <div>
-            <h3> { category } </h3>
+        <Fragment>
+        <h3> { category } </h3>
+        <div className="card-grid">
+            
             <ol>
                 {
                     images.map( img =>(
@@ -36,6 +38,8 @@ export const GifGrid = ({ category }) => {
                 } 
             </ol>
         </div>
+        </Fragment>
+
     )
 
 }
