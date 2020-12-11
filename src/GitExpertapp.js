@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import AddCategory from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 const GitExpertapp = props => {
 
-    const [categories, setCategories] = useState(['One Punch','Samurai X','Dragon Ball']);
-
+    const [categories, setCategories] = useState(['One Punch']);
+    
     const handleAdd = () =>{
         setCategories( [ 'HunterXHunter', ... categories ] )
     }
@@ -13,13 +14,12 @@ const GitExpertapp = props => {
     return (
         <Fragment>
             <h2>GitExpertapp</h2>
-           <AddCategory setCategories={ setCategories } />
-            <hr/>
+            <AddCategory setCategories={ setCategories } />
             <ol>
                 {
-                    categories.map( category =>{
-                        return <li key={ category }> { category } </li>
-                    })
+                    categories.map( category =>(
+                        <GifGrid key={ category } category={ category }/>
+                    ))
                 }
             </ol>
 
