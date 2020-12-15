@@ -11,7 +11,7 @@ function AddCategory( { setCategories } ) {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        setCategories( cats => [ ...cats, inputValue ] ); // agregamos nuevos elementos a nuestra lista 
+        setCategories( cats => [  inputValue, ...cats ] ); // agregamos nuevos elementos a nuestra lista 
         setInputValue(''); // refrescamos el input
     }
 
