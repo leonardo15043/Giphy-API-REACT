@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export const GitGridItem = ( { id, title, url } ) => {
 
@@ -9,3 +10,9 @@ export const GitGridItem = ( { id, title, url } ) => {
         </div>
     )
 }
+
+
+GitGridItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+} 
