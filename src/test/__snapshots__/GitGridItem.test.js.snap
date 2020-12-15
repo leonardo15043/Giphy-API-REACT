@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GitGridItem Cargar correctamente el componente 1`] = `
+<div
+  className="card animate__animated animate__fadeInLeft"
+>
+  <img
+    alt="Bored One"
+    src="https://media4.giphy.com/media/6IkjQmpaRwIabJ2G3C/giphy-downsized-medium.gif?cid=cd622c90mqvu6s36rmyko0ies0n0xgn9t26d0wqtlmkvdpzw&rid=giphy-downsized-medium.gif"
+  />
+  <p>
+    Bored One
+  </p>
+</div>
+`;
